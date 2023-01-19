@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Mercado Liebre</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-header">
+      <img class="logo" src="./images/logo-mercado-liebre.svg" alt="logo de Mercado Liebre">
+        <form action="/search-product" method="POST" class="search">
+          <input class="input-search" type="search" placeholder="Buscar productos, marcas y mas ">
+          <i class="fas fa-search"></i>
+        </form>
+      <div class="copy-header">
+        <i class="fas fa-hand-holding-usd"></i>
+        <p>Comprá en cuotas y sin tarjeta de crédito</p>
+      </div>
+    </nav>
+
+    <nav class="navbar">
+      <ul class="left-navbar">
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas Oficiales</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+
+      <ul class="right-navbar">
+        <div class="list-header">
+          <li><a href="/register">Creá tu cuenta <i class="fas fa-id-card "></i></a></li>   
+        </div>
+        <div class="list-header">
+          <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+        </div>
+        <div class="list-header">
+          <li><a href="#">Mis compras <i class="fas fa-shopping-basket "></i></a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <button class="burger-menu">
+      <i class="fas fa-bars fa-2xl"></i>
+    </button>
+  </header>
+
+  <main>
+    <form class="login-form" action="/login" method="post">
+      <label for="user">Inicio de sesión</label>
+      <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+      <label for="password"></label>
+      <input type="password" name="password" id="password" placeholder="Elegí tu contraseña">
+      <button class="register-button login-button" type="button" onclick="location.href= '/';">Enviar</button>
+    </form>
+  </main>
+  
+</body>
+
+</html>

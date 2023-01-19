@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Mercado Liebre</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-header">
+      <img class="logo" src="./images/logo-mercado-liebre.svg" alt="logo de Mercado Liebre">
+        <form action="/search-product" method="POST" class="search">
+          <input class="input-search" type="search" placeholder="Buscar productos, marcas y mas ">
+          <i class="fas fa-search"></i>
+        </form>
+      <div class="copy-header">
+        <i class="fas fa-hand-holding-usd"></i>
+        <p>Comprá en cuotas y sin tarjeta de crédito</p>
+      </div>
+    </nav>
+
+    <nav class="navbar">
+      <ul class="left-navbar">
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas Oficiales</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+
+      <ul class="right-navbar">
+        <div class="list-header">
+          <li><a href="/register">Creá tu cuenta <i class="fas fa-id-card "></i></a></li>   
+        </div>
+        <div class="list-header">
+          <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+        </div>
+        <div class="list-header">
+          <li><a href="#">Mis compras <i class="fas fa-shopping-basket "></i></a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <button class="burger-menu">
+      <i class="fas fa-bars fa-2xl"></i>
+    </button>
+  </header>
+
+  <main>
+    <form action="/register" method="post">
+      <h4 class="titles">Registro de usuario</h4>
+      <div class="personal-form">
+        <label for="name"></label>
+        <input type="text" name="name" id="name" placeholder="Nombre y apellido" required error oninvalid="this.setCustomValidity('Escribe tu nombre completo')">
+        <label for="user"></label>
+        <input type="text" name="name" id="user" placeholder="Nombre de usuario" required error oninvalid="this.setCustomValidity('Escribe un nombre de usuario')">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="E-mail" required error oninvalid="this.setCustomValidity('Escribe un e-mail válido')">
+        <label for="birthdate">Fecha de nacimiento</label>
+        <input type="text" name="birthdate" id="birthdate" placeholder="mm/dd/yyyy"
+        onfocus="(this.type='date')" required error oninvalid="this.setCustomValidity('Escribe tu fecha de nacimiento')">
+        <label for="address"></label>
+        <input type="text" name="address" id="address" placeholder="Domicilio" required error oninvalid="this.setCustomValidity('Escribe tu dirección')">
+      </div>
+      <br>
+      <h4 class="titles">Perfil del usuario</h4>
+      <div class="perfil-form">
+        <input type="radio" name="seller" id="Comprador" value="Comprador" required oninvalid="this.setCustomValidity('Elije una opción')">
+        <label for="seller">Comprador</label>
+        <input type="radio" name="buyer" id="Vendedor" value="Vendedor">
+        <label for="buyer">Vendedor</label>
+      </div>
+      <br>
+      <h4 class="titles">Interéses</h4>
+      <div class="interest-form">
+        <input type="checkbox" id="electro" name="interest" value="electro" />
+        <label for="electro">Electro</label>
+        <input type="checkbox" id="moda" name="interest" value="moda" />
+        <label for="moda">Moda</label>
+        <input type="checkbox" id="hogar" name="interest" value="hogar" />
+        <label for="hogar">Hogar</label>
+        <input type="checkbox" id="jugueteria" name="interest" value="jugueteria" />
+        <label for="jugueteria">Juguetería</label>
+        <input type="checkbox" id="vida sana" name="interest" value="vida sana" />
+        <label for="vida sana">Vida sana</label>
+      </div>
+      
+      <br>
+      <button class="register-button login-button" type="button" onclick="location.href= '/';">Enviar</button>
+      <button class="register-button reset" type="reset">Borrar</button>
+     
+      
+    </form>
+  </main>
+
+</body>
+
+</html>
